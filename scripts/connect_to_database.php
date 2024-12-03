@@ -13,7 +13,7 @@ $database_connect = new mysqli($host,$host_username,$host_password,$database_nam
 if($database_connect->connect_error){
     die("Connection is wrong, check the connection script " . $database_connect->connect_error);
 }else{
-    echo "<p style='color:green;'>Connected to Database, delete this check later</p>";
+    //echo "<p style='color:green;'>Connected to Database, delete this check later</p>";
 }
 
 ?>

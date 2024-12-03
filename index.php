@@ -6,34 +6,27 @@ include 'scripts/connect_to_database.php';
 <head>
     <title> Papar Flower Shop </title>
 </head>
+<!-- links to css and fonts here --> 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="css/index.css">
 <body>
-<h1> This is a flower shop - if you are seeing this its too early ! come back in a week </h1>
+
+<!-- banner section for the main heading -->
+<div class="top-banner">
+    <img src="images/banner-logo.png">
+    <h1>MK FLORAL </h1>
+</div>
+<!-- end the banner section here -->
 
 
-
-<h2> Customer List: </h2>
-
-<?php
+<!-- Navbar section bootstrap this  --> 
 
 
-// print out all the customers from the customers table
-$test_query = "select fname,lname from customer";
-$send_query = $database_connect->query($test_query);
+<!-- Navbar section ends --> 
 
-    
-// if the query has any results 
-if ($send_query->num_rows > 0){
-    // print out all the results
-    while($tuple = $send_query->fetch_assoc()){
-        echo "fname: " . $tuple["fname"] . "</br>";
-        echo "lname: " . $tuple["lname"] . "</br>";
-        echo "<br>";
-    }
-}else{
-  echo "no customers, this shouldnt happen check the table or connection script";
-}
 
-?>
 
 
 </body>
