@@ -1,30 +1,134 @@
 <?php
+session_start(); 
 include 'scripts/connect_to_database.php';
+include 'base.php';
 ?>
+ 
+<div class="row-one">
+<h1> New Arrivals </h1>
 
-<html>
-<head>
-    <title> Papar Flower Shop </title>
-</head>
-<!-- links to css and fonts here --> 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<hr>
 
-<link rel="stylesheet" href="css/index.css">
-<body>
-
-<!-- banner section for the main heading -->
-<div class="top-banner">
-    <img src="images/banner-logo.png">
-    <h1>MK FLORAL </h1>
+<div class="r1-img-one">
+  <img src="images/item_template.png">
+  <h3>Lorem Ipsum</h3>
 </div>
-<!-- end the banner section here -->
+
+<div class="r1-img-one">
+  <img src="images/item_template.png">
+  <h3>Lorem Ipsum</h3>
+</div>
+
+<div class="r1-img-one">
+  <img src="images/item_template.png">
+  <h3>Lorem Ipsum</h3>
+</div>
+
+<div class="r1-img-one">
+  <img src="images/item_template.png">
+  <h3>Lorem Ipsum</h3>
+</div>
+
+</div>
 
 
-<!-- Navbar section bootstrap this  --> 
+<div class="row-two">
+<h1> Popular Arrangements </h1>
+
+<hr>
 
 
-<!-- Navbar section ends --> 
+<div class="r2-img-one">
+  <img src="images/item_template.png">
+  <h3>Lorem Ipsum</h3>
+</div>
+
+<div class="r2-img-one">
+  <img src="images/item_template.png">
+  <h3>Lorem Ipsum</h3>
+</div>
+
+<div class="r2-img-one">
+  <img src="images/item_template.png">
+  <h3>Lorem Ipsum</h3>
+</div>
+
+<div class="r2-img-one">
+  <img src="images/item_template.png">
+  <h3>Lorem Ipsum</h3>
+</div>
+
+
+</div>
+
+
+<div class="row-three">
+
+<h1> Flowers in Season </h1>
+
+<hr>
+
+<div class="r3-img-one">
+  <img src="images/item_template.png">
+  <h3>Lorem Ipsum</h3>
+</div>
+
+<div class="r3-img-one">
+  <img src="images/item_template.png">
+  <h3>Lorem Ipsum</h3>
+</div>
+
+<div class="r3-img-one">
+  <img src="images/item_template.png">
+  <h3>Lorem Ipsum</h3>
+</div>
+
+<div class="r3-img-one">
+  <img src="images/item_template.png">
+  <h3>Lorem Ipsum</h3>
+</div>
+
+
+</div>
+
+<div class="row-four">
+
+<h1> Florist's picks </h1>
+
+<hr>
+<div class="r4-img-one">
+  <img src="images/item_template.png">
+  <h3>Lorem Ipsum</h3>
+</div>
+
+<div class="r4-img-one">
+  <img src="images/item_template.png">
+  <h3>Lorem Ipsum</h3>
+</div>
+
+<div class="r4-img-one">
+  <img src="images/item_template.png">
+  <h3>Lorem Ipsum</h3>
+</div>
+
+<div class="r4-img-one">
+  <img src="images/item_template.png">
+  <h3>Lorem Ipsum</h3>
+</div>
+
+</div>
+
+
+<h1></h1>
+
+
+
+
+<!-- Footer section starts here -->
+
+<?php include 'footer.php' ?>
+
+<!-- Footer section ends here -->
 
 
 
