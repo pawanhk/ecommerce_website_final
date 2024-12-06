@@ -1,0 +1,58 @@
+.top-header{
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.top-header h1{
+    font-size: 35px;
+}
+
+.top-header hr{
+    width: 95%;
+    height: 5px;
+    border: none;
+    background-color: #7CA284;
+    opacity: 100;
+}
+
+
+/* Employee Styles */
+
+.employee{
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.employee .sort{
+    margin-top: 25px;
+}
+
+.employee button{
+    width: 150px;
+    height: 35px;
+    margin-right: 50px;
+    border: 1px solid #7CA284;
+    border-radius: 3px;
+}
+
+.employee .display-emp-tables{
+    margin-top: 30px;
+}
+
+.employee .display-emp-tables table{
+    border: 1px solid #7CA284;
+}
+
+.employee .display-emp-tables table th{
+    text-align: center;
+    border-bottom: 1px solid #7CA284;
+    border-right: 1px solid #7CA284;
+    padding: 20px;
+}
+
+.employee .display-emp-tables table td{
+    text-align: center;
+    border-bottom: 1px solid #7CA284;
+    border-right: 1px solid #7CA284;
+    padding: 20px;
+}

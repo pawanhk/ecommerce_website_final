@@ -119,23 +119,8 @@ include 'base.php';
 </div>
 
 
-<h1></h1>
-
-
-
-
 <!-- Footer section starts here -->
 
 <?php include 'footer.php' ?>
 
 <!-- Footer section ends here -->
-
-
-
-
-</body>
-</html>
-
-<?php
-include 'scripts/disconnect_from_database.php';
-?>

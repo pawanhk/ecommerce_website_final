@@ -12,3 +12,10 @@
   </nav>  
 </div>
 
+
+</body>
+</html>
+
+<?php
+include 'scripts/disconnect_from_database.php';
+?>
