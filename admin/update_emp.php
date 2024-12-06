@@ -67,7 +67,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                                     $rposition = $row['position'];
                                     $rssn = $row['ssn'];
                                     $ryears_worked = $row['years_worked'];
-                                    $rdob = $row['dob'];
+                                    $rdob = $row['DOB'];
                                 }
                 }else{
                     echo '<p class="records_error"> Records could not be found !</p>';
@@ -96,6 +96,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             if($years_worked == NULL){
                 $years_worked = $ryears_worked;
             }
+
             if($dob == NULL){
                 $dob = $rdob;
             }
