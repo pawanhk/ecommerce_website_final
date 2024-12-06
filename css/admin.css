@@ -5,6 +5,14 @@
 
 .top-header h1{
     font-size: 35px;
+    display: inline-block;
+}
+
+.top-header a{
+    margin-left: 20px;
+    color: #7CA284;
+    text-decoration: underline;
+    display: inline-flex;
 }
 
 .top-header hr{
@@ -56,3 +64,64 @@
     border-right: 1px solid #7CA284;
     padding: 20px;
 }
+
+/* Update Form Style */
+
+.update-form{
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.update-form h3{
+    font-size: 30px;
+}
+
+.update-form select{
+    font-size: 20px;
+}
+
+.update-form input{
+    margin-bottom: 10px;
+    width: 35%;
+    height: 35px;
+    border: 1px solid #7CA284;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.update-form h4{
+    margin-bottom: 10px;
+}
+
+.update-form button{
+    margin-top: 20px;
+    width: 10%;
+    height: 50px;
+    border: 1px solid #7CA284;
+    border-radius: 4px;
+    font-size: 20px;
+    color: white;
+    background-color: black;
+}
+
+
+.records_error{
+    margin-left: 50px;
+    font-size: 18px;
+    color: red !important;
+}
+
+.records_update{
+    margin-left: 50px;
+    font-size: 18px;
+    color: #7CA284 !important;
+}
+
+.del-notice{
+    margin-top: 10px;
+    font-size: 18px;
+    color: orange;
+}
+
+/* delete stuff */
+

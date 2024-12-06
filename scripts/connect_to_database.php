@@ -7,13 +7,15 @@ $host_username = "root";
 $host_password = "";
 $database_name = "flower_shop";
 
-// create a new mysqli object and connect to the localhost
-$database_connect = new mysqli($host,$host_username,$host_password,$database_name,$port);
-
-if($database_connect->connect_error){
-    die("Connection is wrong, check the connection script " . $database_connect->connect_error);
-}else{
-    //echo "<p style='color:green;'>Connected to Database, delete this check later</p>";
+// handle the connection exception
+try{
+    // create the PDO connection object
+    $database_connect = new PDO("mysql:host=$host;dbname=$database_name;port=$port",$host_username,$host_password);
+    // set the PDO error reporting mode
+    $database_connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}catch(PDOException $e){
+    echo "Could not connect to the databas !";
 }
+
 
 ?>

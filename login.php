@@ -43,5 +43,4 @@ session_start();
 
 <?php
 ob_end_flush();
-include 'scripts/disconnect_from_database.php';
 ?>

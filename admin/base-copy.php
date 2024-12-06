@@ -1,8 +1,8 @@
 <?php
 error_reporting(E_ERROR);
-include 'scripts/connect_to_database.php';
+include '../scripts/connect_to_database.php';
 if(!$_SESSION['username']){
-  include 'scripts/admin_display_page.php';
+  include '../scripts/admin_display_page.php';
 }
 // set the eid to the current logged in user
 $eid = $_SESSION['username'];
@@ -16,14 +16,14 @@ $eid = $_SESSION['username'];
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-<link rel="stylesheet" href="css/index.css">
-<link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="css/login.css">
+<link rel="stylesheet" href="../css/index.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/login.css">
 <body>
 
 <!-- banner section for the main heading -->
 <div class="top-banner">
-    <img src="images/banner-logo.png">
+    <img src="../images/banner-logo.png">
     <a href="index.php"><h1>MK FLORAL </h1></a>
 </div>
 <!-- end the banner section here -->

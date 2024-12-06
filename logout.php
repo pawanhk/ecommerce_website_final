@@ -12,4 +12,7 @@ header("Location: index.php?logout=success");
 // end the ob flush 
 ob_end_flush();
 
+// destroy the session
+session_destroy();
+
 ?>

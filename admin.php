@@ -2,10 +2,12 @@
 session_start(); 
 include 'scripts/connect_to_database.php';
 include 'base.php';
-if(!$username){
+// if its another user and not the admin, kick them out
+if($eid != "pxk5296"){
     header("Location: index.php?noaccess");
 }
 ?>
+
 <link rel="stylesheet" href="css/admin.css">
 
 <div class="top-header">
@@ -21,12 +23,11 @@ if(!$username){
     <div class="sort">
         <form method="POST">
             <button name="allemp" type="submit"> All Employees </button>
+            <button name="onlyexecs" type="submit"> Executives </button>
             <button name="odoboy" type="submit"> Order by DOB (OY) </button>
             <button name="odobyo" type="submit"> Order by DOB (YO) </button>
-            <button name="onlyexecs" type="submit"> Only Execs </button>
-            <button type="submit"> Next Birthdays </button>
-            <button type="submit"> Update Records </button>
-            <button type="submit"> Delete Records </button>
+            <button name="upemp" type="submit"> Update Records </button>
+            <button name="delemp" type="submit"> Delete Records </button>
         </form>
     </div>
 
