@@ -85,3 +85,10 @@ include 'scripts/admin_display_page.php';
   </div>
 </nav>
 <!-- Navbar section ends --> 
+
+
+<?php
+
+phpinfo();
+
+?>
