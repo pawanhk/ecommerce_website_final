@@ -4,8 +4,10 @@ include '../scripts/connect_to_database.php';
 if(!$_SESSION['username']){
   include '../scripts/admin_display_page.php';
 }
+session_start();
 // set the eid to the current logged in user
 $eid = $_SESSION['username'];
+$emp_status = $_SESSION['employee'];
 ?>
 
 <html>
@@ -24,7 +26,7 @@ $eid = $_SESSION['username'];
 <!-- banner section for the main heading -->
 <div class="top-banner">
     <img src="../images/banner-logo.png">
-    <a href="index.php"><h1>MK FLORAL </h1></a>
+    <a href="../index.php"><h1>MK FLORAL </h1></a>
 </div>
 <!-- end the banner section here -->
 
@@ -36,30 +38,35 @@ $eid = $_SESSION['username'];
         <li class="nav-item">
           <a class="nav-link active" href="../index.php">Home</a>
         </li>
+        <?php
+        if($eid && $eid != 'pxk5296' && $emp_status != 1){
+          echo '
+            <li class="nav-item">
+              <a class="nav-link" href="arr.php">Arrangements</a>
+            </li>';
+        }
+        ?>
         <li class="nav-item">
-          <a class="nav-link" href="../arr.php">Arrangements </a>
+          <a class="nav-link" href="#">Flowers</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../flowers.php">Flowers</a>
+          <a class="nav-link" href="#">Chocolates</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../coco.php">Chocolates</a>
+          <a class="nav-link" href="#">Greens</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../greens.php">Greens</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../trink.php">Trinkets</a>
+          <a class="nav-link" href="#">Trinkets</a>
         </li>
         <?php
         if($eid == 'pxk5296'){
           echo '
         <span class="admin-icons">
           <li class="nav-item">
-            <a class="nav-link" href="admin.php"> <img src="images/admin.png"> </a>
+            <a class="nav-link" href="admin.php"> <img src="../images/admin.png"> </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="logout.php"> <img src="images/logout.png"> </a>
+            <a class="nav-link" href="logout.php"> <img src="../images/logout.png"> </a>
           </li>
         </span>';
         }
@@ -69,22 +76,17 @@ $eid = $_SESSION['username'];
           <span class="nav_icons">
           <li class="nav-item">
             <div class="profle_icon">
-              <a class="nav-link" href="employee/eprofile.php"> <img src="images/profile.png"> </a>
+              <a class="nav-link" href="eprofile.php"> <img src="../images/profile.png"> </a>
             </div>
           </li>
           <li class="nav-item">
             <div class="profle_icon">
-              <a class="nav-link" href="inventory.php"> <img src="images/inv.png"> </a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <div class="profle_icon">
-              <a class="nav-link" href="orders.php"> <img src="images/truck.png"> </a>
+              <a class="nav-link" href="einv.php"> <img src="../images/inv.png"> </a>
             </div>
           </li>
           <li class="nav-item">
              <div class="profle_icon">
-              <a class="nav-link" href="logout.php"> <img src="images/logout.png"> </a>
+              <a class="nav-link" href="../logout.php"> <img src="../images/logout.png"> </a>
             </div>
           </li>
           </span>';
@@ -95,17 +97,17 @@ $eid = $_SESSION['username'];
           <span class="nav_icons">
           <li class="nav-item">
             <div class="profle_icon">
-              <a class="nav-link" href="user/profile.php"> <img src="images/profile.png"> </a>
+              <a class="nav-link" href="user/profile.php"> <img src="../images/profile.png"> </a>
             </div>
           </li>
           <li class="nav-item">
             <div class="profle_icon">
-              <a class="nav-link" href="shopping_cart.php"> <img src="images/shopping_cart.png"> </a>
+              <a class="nav-link" href="../shopping_cart.php"> <img src="../images/shopping_cart.png"> </a>
             </div>
           </li>
           <li class="nav-item">
              <div class="profle_icon">
-              <a class="nav-link" href="logout.php"> <img src="images/logout.png"> </a>
+              <a class="nav-link" href="../logout.php"> <img src="../images/logout.png"> </a>
             </div>
           </li>
           </span>';
@@ -131,7 +133,6 @@ $eid = $_SESSION['username'];
   </div>
 </nav>
 <!-- Navbar section ends --> 
-
 
 <?php
 

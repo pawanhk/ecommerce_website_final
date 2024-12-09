@@ -55,6 +55,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                 }
 
             }catch(PDOException $e){
+                echo $e->getMessage();
                 echo '<p class="records_error"> Query Error in the adming page !</p>';
             }
         }else{

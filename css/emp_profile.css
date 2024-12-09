@@ -20,13 +20,12 @@
     display: flex;
     justify-content: start; 
     align-items: baseline; 
-    margin: 10px 0;
 }
 
 .emp-details span{
     margin-left: auto;
     text-align: left; 
-    width: 1670px;
+    width: 85%;
 }
 
 .emp-details hr{
@@ -43,9 +42,8 @@
 }
 
 .display-emp-tables{
-    margin-top: 30px;
-    margin-left: 45px;
-    padding-bottom: 100px;
+    margin-left: 0px;
+    padding-bottom: 50px;
 }
 
 .display-emp-tables table{

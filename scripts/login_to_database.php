@@ -11,12 +11,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         $username = $_POST['username'];
         $password = $_POST['password'];
 
-        // admin only password -- change this later not secure
-        if($username == "pxk5296" && $password="welcome1234"){
-            $_SESSION["username"] = "pxk5296";
-            header("Location:index.php?login=success");
-        }
-
         // get the encrypted password 
         $epass = password_verify($password, $_POST['password']);
         try{

@@ -23,7 +23,7 @@ if($eid != "pxk5296"){
         <h4>Last Name </h4> <input type="text" name="lname"> 
         <h4>Position </h4> <input type="text" name="position"> 
         <h4>SSN </h4> <input type="text" name="ssn"> 
-        <h4>password </h4> <input type="text" name="password"> 
+        <h4>password </h4> <input type="password" name="password"> 
         <h4>Years Worked </h4> <input type="text" name="years_worked"> 
         <h4>Date of Birth </h4> <input type="text" name="dob" placeholder="YYYY/MM/DD"> 
         <br>

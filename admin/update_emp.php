@@ -102,14 +102,18 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             }
 
             try{
+                // start the transaction
+                $database_connect->beginTransaction();
                 // template query to bind the username and password into
-                $update_template_query = "UPDATE employee SET
+                $update_template_query = "
+                    UPDATE employee SET
                     fname = :fname,
                     lname = :lname,
                     position = :position,
                     ssn = :ssn,
                     years_worked = :years_worked,
-                    dob = :dob WHERE eid = :eid ";
+                    dob = :dob WHERE eid = :eid 
+                    ";
                 // prepared login statement 
                 $update_prepared_statement = $database_connect->prepare($update_template_query);
                 // execute the prepared statement and bind the eid and password
@@ -125,12 +129,14 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                 // if the query returned with data, set the session variable
                 if($update_prepared_statement->rowCount() > 0){
                     echo '<p class="records_update"> Records Updated Successfully !</p>';
+                    $database_connect->commit();
                 }else{
                     echo '<p class="records_error"> Invalid data </p>';
                 }
             }catch(PDOException $e){
-                echo $e->getMessage();
-                echo '<p class="records_error"> Query Error in the adming page 1 !</p>';
+                //echo $e->getMessage();
+                $database_connect->rollBack();
+                echo '<p class="records_error"> Transaction Rolled Back !</p>';
             }
         }else{
             echo '<p class="records_error"> EID is required !</p>';

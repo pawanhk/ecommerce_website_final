@@ -38,9 +38,14 @@ $emp_status = $_SESSION['employee'];
         <li class="nav-item">
           <a class="nav-link active" href="index.php">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="arr.php">Arrangements</a>
-        </li>
+        <?php
+        if($eid && $eid != 'pxk5296' && $emp_status != 1){
+          echo '
+            <li class="nav-item">
+              <a class="nav-link" href="arr.php">Arrangements</a>
+            </li>';
+        }
+        ?>
         <li class="nav-item">
           <a class="nav-link" href="#">Flowers</a>
         </li>
@@ -75,13 +80,8 @@ $emp_status = $_SESSION['employee'];
             </div>
           </li>
           <li class="nav-item">
-            <div class="profle_icon">
-              <a class="nav-link" href="inventory.php"> <img src="images/inv.png"> </a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <div class="profle_icon">
-              <a class="nav-link" href="orders.php"> <img src="images/truck.png"> </a>
+             <div class="profle_icon">
+              <a class="nav-link" href="employee/einv.php"> <img src="images/inv.png"> </a>
             </div>
           </li>
           <li class="nav-item">

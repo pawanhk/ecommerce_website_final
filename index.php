@@ -10,113 +10,58 @@ include 'base.php';
 <hr>
 
 <div class="r1-img-one">
-  <img src="images/temp_flower.png">
-  <h3>Lorem Ipsum</h3>
+  <img src="images/daisy.jpg">
+  <h3>White Daisy</h3>
 </div>
 
 <div class="r1-img-one">
-  <img src="images/temp_flower.png">
-  <h3>Lorem Ipsum</h3>
+  <img src="images/redp.jpg">
+  <h3>Red Peony</h3>
 </div>
 
 <div class="r1-img-one">
-  <img src="images/temp_flower.png">
-  <h3>Lorem Ipsum</h3>
+  <img src="images/yelspra.jpg">
+  <h3>Yellow Spray Rose</h3>
 </div>
 
 <div class="r1-img-one">
-  <img src="images/temp_flower.png">
-  <h3>Lorem Ipsum</h3>
+  <img src="images/pinkst.jpg">
+  <h3>Pink Stargazer</h3>
 </div>
 
 </div>
 
 
 <div class="row-two">
-<h1> Popular Arrangements </h1>
-
+<h1> Popular Greenery </h1>
 <hr>
 
-
 <div class="r2-img-one">
-  <img src="images/temp_flower.png">
-  <h3>Lorem Ipsum</h3>
-</div>
-
-<div class="r2-img-one">
-  <img src="images/temp_flower.png">
-  <h3>Lorem Ipsum</h3>
+  <img src="images/euc.jpg">
+  <h3>eucalyptus</h3>
 </div>
 
 <div class="r2-img-one">
-  <img src="images/temp_flower.png">
-  <h3>Lorem Ipsum</h3>
+  <img src="images/ivy.jpg">
+  <h3>Green Ivy</h3>
 </div>
 
 <div class="r2-img-one">
-  <img src="images/temp_flower.png">
-  <h3>Lorem Ipsum</h3>
+  <img src="images/mapel.jpg">
+  <h3>Red Mapel</h3>
+</div>
+
+
+<div class="r2-img-one">
+  <img src="images/fern.jpg">
+  <h3>Green Fern</h3>
 </div>
 
 
 </div>
 
 
-<div class="row-three">
 
-<h1> Flowers in Season </h1>
-
-<hr>
-
-<div class="r3-img-one">
-  <img src="images/temp_flower.png">
-  <h3>Lorem Ipsum</h3>
-</div>
-
-<div class="r3-img-one">
-  <img src="images/temp_flower.png">
-  <h3>Lorem Ipsum</h3>
-</div>
-
-<div class="r3-img-one">
-  <img src="images/temp_flower.png">
-  <h3>Lorem Ipsum</h3>
-</div>
-
-<div class="r3-img-one">
-  <img src="images/temp_flower.png">
-  <h3>Lorem Ipsum</h3>
-</div>
-
-
-</div>
-
-<div class="row-four">
-
-<h1> Florist's picks </h1>
-
-<hr>
-<div class="r4-img-one">
-  <img src="images/temp_flower.png">
-  <h3>Lorem Ipsum</h3>
-</div>
-
-<div class="r4-img-one">
-  <img src="images/temp_flower.png">
-  <h3>Lorem Ipsum</h3>
-</div>
-
-<div class="r4-img-one">
-  <img src="images/temp_flower.png">
-  <h3>Lorem Ipsum</h3>
-</div>
-
-<div class="r4-img-one">
-  <img src="images/temp_flower.png">
-  <h3>Lorem Ipsum</h3>
-</div>
-
-</div>
 
 
 <!-- Footer section starts here -->

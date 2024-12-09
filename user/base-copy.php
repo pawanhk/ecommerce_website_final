@@ -37,9 +37,14 @@ $emp_status = $_SESSION['employee'];
         <li class="nav-item">
           <a class="nav-link active" href="../index.php">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../arr.php">Arrangements </a>
-        </li>
+        <?php
+        if($eid && $eid != 'pxk5296' && $emp_status != 1){
+          echo '
+            <li class="nav-item">
+              <a class="nav-link" href="arr.php">Arrangements</a>
+            </li>';
+        }
+        ?>
         <li class="nav-item">
           <a class="nav-link" href="#">Flowers</a>
         </li>
@@ -65,38 +70,13 @@ $emp_status = $_SESSION['employee'];
         </span>';
         }
 
-        else if($eid && $eid != 'pxk5296' && $emp_status == 1){
-          echo '
-          <span class="nav_icons">
-          <li class="nav-item">
-            <div class="profle_icon">
-              <a class="nav-link" href="employee/eprofile.php"> <img src="../images/profile.png"> </a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <div class="profle_icon">
-              <a class="nav-link" href="inventory.php"> <img src="../images/inv.png"> </a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <div class="profle_icon">
-              <a class="nav-link" href="orders.php"> <img src="../images/truck.png"> </a>
-            </div>
-          </li>
-          <li class="nav-item">
-             <div class="profle_icon">
-              <a class="nav-link" href="../ logout.php"> <img src="../images/logout.png"> </a>
-            </div>
-          </li>
-          </span>';
-        }
-
+      
         else if($eid && $eid != 'pxk5296' && $emp_status != 1){
           echo '
           <span class="nav_icons">
           <li class="nav-item">
             <div class="profle_icon">
-              <a class="nav-link" href="user/profile.php"> <img src="../images/profile.png"> </a>
+              <a class="nav-link" href="profile.php"> <img src="../images/profile.png"> </a>
             </div>
           </li>
           <li class="nav-item">

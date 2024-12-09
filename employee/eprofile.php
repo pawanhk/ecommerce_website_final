@@ -26,18 +26,6 @@ session_start();
  </div>
 
 <br>
- <div class="emp-details">
-    <h2>Assigned Arrangements: </h2>
-    <br>
-    <form method="POST">
-        <button type="submit" name="view_all">View All</button>
-    </form>
-
-    <div class="display-emp-tables">
-        <?php include "../queries/employee-arr-queries.php"; ?>
-    </div>
-    
- </div>
 
  
 
