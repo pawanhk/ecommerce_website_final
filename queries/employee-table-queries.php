@@ -28,7 +28,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                 <th> Last Name </th>
                 <th> Position </th>
                 <th> SSN </th>
-                <th> Password </th>
                 <th> Years Worked </th>
                 <th> Date of Birth </th>
                 </tr>";
@@ -44,8 +43,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                     echo "<td>" . $position . "</td>";
                     $ssn = $row['ssn'];
                     echo "<td>" . $ssn . "</td>";
-                    $password = $row['password'];
-                    echo "<td>" . $password . "</td>";
                     $years_worked = $row['years_worked'];
                     echo "<td>" . $years_worked . "</td>";
                     $DOB = $row['DOB'];
@@ -225,11 +222,15 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             echo "Query error in the admin page !";
         }
     }
-    //q5 Update records 
+    //q5 New Employee 
+    if(isset($_POST["newemp"])){
+        header("Location:admin/new_emp.php");
+    }
+    //q6 Update records 
     if(isset($_POST["upemp"])){
         header("Location:admin/update_emp.php");
     }
-    //q6 Delete records
+    //q7 Delete records
     if(isset($_POST["delemp"])){
         header("Location:admin/delete_emp.php");
     }

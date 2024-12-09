@@ -61,7 +61,7 @@ $eid = $_SESSION['username'];
           <a class="nav-link" href="admin.php"> Admin </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="logout.php"> Logout </a>
+          <a class="nav-link" href="../logout.php"> Logout </a>
         </li>';
         }
 
@@ -71,7 +71,7 @@ $eid = $_SESSION['username'];
             <a class="nav-link" href="profile.php"> Profile </a>
           </li>
           <li class="nav-item">
-          <a class="nav-link" href="logout.php"> Logout </a>
+          <a class="nav-link" href="../logout.php"> Logout </a>
           </li>'; 
         }
 

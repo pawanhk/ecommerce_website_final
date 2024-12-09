@@ -10,7 +10,7 @@ session_start();
  
 
 <div class="login-form">
-    <h1>Welcome To The Floral Community </h1>
+    <h1> Welcome Back ! </h1>
     <form method="POST">
         <h3> Email </h3>    
         <input type="text" name="username">
@@ -22,18 +22,11 @@ session_start();
     </form>
 </div>
 
-<?php include 'scripts/login_to_database.php'?>
+<?php 
+// add checks here for form verification: 
+include 'scripts/login_to_database.php'
 
-
-<!-- Footer section starts here -->
-
-<footer>
-  
-</footer>
-
-
-
-<!-- Footer section ends here -->
+?>
 
 
 
