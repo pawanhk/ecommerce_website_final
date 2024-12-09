@@ -39,19 +39,19 @@ $emp_status = $_SESSION['employee'];
           <a class="nav-link active" href="index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="arr.php">Arrangements </a>
+          <a class="nav-link" href="arr.php">Arrangements</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="flowers.php">Flowers</a>
+          <a class="nav-link" href="#">Flowers</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="coco.php">Chocolates</a>
+          <a class="nav-link" href="#">Chocolates</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="green.php">Greens</a>
+          <a class="nav-link" href="#">Greens</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="trink.php">Trinkets</a>
+          <a class="nav-link" href="#">Trinkets</a>
         </li>
         <?php
         if($eid == 'pxk5296'){

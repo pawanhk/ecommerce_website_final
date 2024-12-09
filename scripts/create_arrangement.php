@@ -27,7 +27,7 @@ try{
 
     // if the query returned with data, set the session variable
     if($insert_prepared_statement->rowCount() > 0){
-        header("Location: ../cart.php?arrangement=success");
+        header("Location: ../shopping_cart.php?arrangement=success");
     }else{
         echo '<p class="records_error"> error in arrangements table ! </p>';
     }

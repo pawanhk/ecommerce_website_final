@@ -1,0 +1,63 @@
+
+.top-header{
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.top-header h1{
+    font-size: 35px;
+    display: inline-block;
+}
+
+.top-header a{
+    margin-left: 20px;
+    color: #7CA284;
+    text-decoration: underline;
+    display: inline-flex;
+}
+
+.top-header hr{
+    width: 95%;
+    height: 5px;
+    border: none;
+    background-color: #7CA284;
+    opacity: 100;
+}
+
+.cart{
+    margin-left: 15px;
+    font-size: 25px;
+    display: flex;
+    align-items: center; 
+    padding: 30px;
+    margin-bottom: 10px; 
+    justify-content: space-between;
+}
+
+
+
+.cart-item {
+    font-size: 30px; 
+    flex: 1; 
+}
+
+.cart-price {
+    font-size: 30px; 
+    margin-right: 20px; /* Moves the price div to the left */
+}
+
+.total{
+    display: flex;
+    margin-left: 50px;
+}
+
+.total .tcost{
+    font-size: 25px;
+    margin-left: 1170px;
+}
+
+
+.display-emp-tables hr{
+    width: 93%;
+    margin-left: 50px;
+}

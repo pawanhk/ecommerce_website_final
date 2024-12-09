@@ -29,13 +29,9 @@ session_start();
  <div class="emp-details">
     <h2>Assigned Arrangements: </h2>
     <br>
-    <button type="submit" name="upd">View All</button>
-    <button type="submit" name="cpass">Group by Customer</button>
-    <button type="submit" name="cpass">Group by ZIP</button>
-    <button type="submit" name="cpass">Order by Cost (LH)</button>
-    <button type="submit" name="cpass">Order by Cost (HL)</button>
-    <button type="submit" name="cpass">Update Records</button>
-    <button type="submit" name="cpass">Delete Records</button>
+    <form method="POST">
+        <button type="submit" name="view_all">View All</button>
+    </form>
 
     <div class="display-emp-tables">
         <?php include "../queries/employee-arr-queries.php"; ?>

@@ -39,19 +39,19 @@ $emp_status = $_SESSION['employee'];
           <a class="nav-link active" href="../index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../arr.php">Arrangements </a>
+          <a class="nav-link" href="../arr.php">Arrangements</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../flowers.php">Flowers</a>
+          <a class="nav-link" href="#">Flowers</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../coco.php">Chocolates</a>
+          <a class="nav-link" href="#">Chocolates</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../greens.php">Greens</a>
+          <a class="nav-link" href="#">Greens</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../trink.php">Trinkets</a>
+          <a class="nav-link" href="#">Trinkets</a>
         </li>
         <?php
         if($eid == 'pxk5296'){
@@ -71,17 +71,17 @@ $emp_status = $_SESSION['employee'];
           <span class="nav_icons">
           <li class="nav-item">
             <div class="profle_icon">
-              <a class="nav-link" href="employee/eprofile.php"> <img src="../images/profile.png"> </a>
+              <a class="nav-link" href="eprofile.php"> <img src="../images/profile.png"> </a>
             </div>
           </li>
           <li class="nav-item">
             <div class="profle_icon">
-              <a class="nav-link" href="inventory.php"> <img src="../images/inv.png"> </a>
+              <a class="nav-link" href="#"> <img src="../images/inv.png"> </a>
             </div>
           </li>
           <li class="nav-item">
             <div class="profle_icon">
-              <a class="nav-link" href="orders.php"> <img src="../images/truck.png"> </a>
+              <a class="nav-link" href="#"> <img src="../images/truck.png"> </a>
             </div>
           </li>
           <li class="nav-item">
