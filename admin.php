@@ -50,7 +50,6 @@ if($eid != "pxk5296"){
             <button name="grbyage" type="submit"> Group by Age </button>
             <button name="alladd" type="submit"> Address Book </button>
             <button name="grbyzip" type="submit"> Group by ZIP </button>
-            <button name="srcust" type="submit"> Search Customer </button>
             <button name="upcust" type="submit"> Update Records </button>
             <button name="delcust" type="submit"> Delete Records </button>
         </form>

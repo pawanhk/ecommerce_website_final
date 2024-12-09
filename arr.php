@@ -17,7 +17,6 @@ include 'base.php';
             <button name="allflowers" type="submit"> View All Flowers  </button>
             <button name="pricelo" type="submit"> Price (Lowest-Highest) </button>
             <button name="pricehi" type="submit"> Price (Highest-Lowest) </button>
-            <button name="petsafe" type="submit"> Pet Safe  </button>
     </form>
     <hr>
 </div>

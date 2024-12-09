@@ -46,18 +46,6 @@ $emp_status = $_SESSION['employee'];
             </li>';
         }
         ?>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Flowers</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Chocolates</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Greens</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Trinkets</a>
-        </li>
         <?php
         if($eid == 'pxk5296'){
           echo '

@@ -45,7 +45,7 @@
 .nav_icons {
     gap: 10px;
     padding: 0; 
-    margin-left: 47%;
+    margin-left: 70%;
     display: flex;
 }
 
@@ -59,13 +59,13 @@
 
 .def-icons{
     display: flex;
-    margin-left: 58%;
+    margin-left: 81%;
     margin-right: 0;
 }
 
 .admin-icons{
     display: flex;
-    margin-left: 60.5%;
+    margin-left: 84%;
     margin-right: 0;
 }
 

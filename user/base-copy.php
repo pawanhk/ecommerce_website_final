@@ -41,22 +41,10 @@ $emp_status = $_SESSION['employee'];
         if($eid && $eid != 'pxk5296' && $emp_status != 1){
           echo '
             <li class="nav-item">
-              <a class="nav-link" href="arr.php">Arrangements</a>
+              <a class="nav-link" href="../arr.php">Arrangements</a>
             </li>';
         }
         ?>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Flowers</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Chocolates</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Greens</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Trinkets</a>
-        </li>
         <?php
         if($eid == 'pxk5296'){
           echo '

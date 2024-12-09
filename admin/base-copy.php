@@ -46,27 +46,15 @@ $emp_status = $_SESSION['employee'];
             </li>';
         }
         ?>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Flowers</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Chocolates</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Greens</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Trinkets</a>
-        </li>
         <?php
         if($eid == 'pxk5296'){
           echo '
         <span class="admin-icons">
           <li class="nav-item">
-            <a class="nav-link" href="admin.php"> <img src="../images/admin.png"> </a>
+            <a class="nav-link" href="../admin.php"> <img src="../images/admin.png"> </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="logout.php"> <img src="../images/logout.png"> </a>
+            <a class="nav-link" href="../logout.php"> <img src="../images/logout.png"> </a>
           </li>
         </span>';
         }
