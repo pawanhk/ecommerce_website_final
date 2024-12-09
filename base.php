@@ -4,8 +4,10 @@ include 'scripts/connect_to_database.php';
 if(!$_SESSION['username']){
   include 'scripts/admin_display_page.php';
 }
+session_start();
 // set the eid to the current logged in user
 $eid = $_SESSION['username'];
+$emp_status = $_SESSION['employee'];
 ?>
 
 <html>
@@ -51,9 +53,6 @@ $eid = $_SESSION['username'];
         <li class="nav-item">
           <a class="nav-link" href="#">Chocolates</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Shopping Cart</a>
-        </li>
         <?php
         if($eid == 'pxk5296'){
           echo '
@@ -65,20 +64,56 @@ $eid = $_SESSION['username'];
         </li>';
         }
 
-        else if($eid && $eid != 'pxk5296'){
+        else if($eid && $eid != 'pxk5296' && $emp_status == 1){
           echo '
+          <span class="nav_icons">
           <li class="nav-item">
-            <a class="nav-link" href="profile.php"> Profile </a>
+            <div class="profle_icon">
+              <a class="nav-link" href="profile.php"> <img src="images/emp_profile.png"> </a>
+            </div>
           </li>
           <li class="nav-item">
-          <a class="nav-link" href="logout.php"> Logout </a>
-          </li>'; 
+            <div class="profle_icon">
+              <a class="nav-link" href="shopping_cart.php"> <img src="images/inv.png"> </a>
+            </div>
+          </li>
+          <li class="nav-item">
+             <div class="profle_icon">
+              <a class="nav-link" href="logout.php"> <img src="images/logout.png"> </a>
+            </div>
+          </li>
+          </span>';
+        }
+
+        else if($eid && $eid != 'pxk5296' && $emp_status != 1){
+          echo '
+          <span class="nav_icons">
+          <li class="nav-item">
+            <div class="profle_icon">
+              <a class="nav-link" href="profile.php"> <img src="images/profile.png"> </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="profle_icon">
+              <a class="nav-link" href="shopping_cart.php"> <img src="images/shopping_cart.png"> </a>
+            </div>
+          </li>
+          <li class="nav-item">
+             <div class="profle_icon">
+              <a class="nav-link" href="logout.php"> <img src="images/logout.png"> </a>
+            </div>
+          </li>
+          </span>';
         }
 
         else{
           echo '
           <li class="nav-item">
             <a class="nav-link" href="login.php"> Login </a>
+          </li>';
+          echo '
+          <li class="nav-item">
+            <a class="nav-link" href="signup.php"> Signup </a>
           </li>';
         }
 

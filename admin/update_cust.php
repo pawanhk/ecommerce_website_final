@@ -11,20 +11,19 @@ if($eid != "pxk5296"){
 <link rel="stylesheet" href="../css/admin.css">
 
 <div class="top-header">
-    <h1> Admin Employee Update Page </h1> <a href="../admin.php"> Go Back </a>
+    <h1> Admin - Customer Update Page </h1> <a href="../admin.php"> Go Back </a>
     <hr>
 </div>
 
 
 <div class="update-form">
     <form method="POST">
-        <h4>EID </h4> <input type="text" name="eid"> 
+        <h4>CID </h4> <input type="text" name="cid"> 
         <h4>First Name </h4> <input type="text" name="fname"> 
         <h4>Last Name </h4> <input type="text" name="lname"> 
-        <h4>Position </h4> <input type="text" name="position"> 
-        <h4>SSN </h4> <input type="text" name="ssn"> 
-        <h4>Years Worked </h4> <input type="text" name="years_worked"> 
-        <h4>Date of Birth </h4> <input type="text" name="dob" placeholder="YYYY/MM/DD"> 
+        <h4>Email </h4> <input type="text" name="email"> 
+        <h4>Phone </h4> <input type="text" name="phone"> 
+        <h4>Age </h4> <input type="text" name="age"> 
         <br>
         <button name="up" type="submit">Update</button>
     </form>
@@ -36,38 +35,36 @@ if($eid != "pxk5296"){
 if($_SERVER['REQUEST_METHOD'] == "POST"){
     if(isset($_POST['up'])){
         // get the values from post to pass to the database
-        $eid = $_POST['eid'];
+        $cid = $_POST['cid'];
         $fname = $_POST['fname'];
         $lname = $_POST['lname'];
-        $position = $_POST['position'];
-        $ssn = $_POST['ssn'];
-        $years_worked = $_POST['years_worked'];
-        $dob = $_POST['dob'];
+        $email = $_POST['email'];
+        $phone = $_POST['phone'];
+        $age = $_POST['age'];
 
-        // only continue if an EID was provided 
-        if($eid){
+        // only continue if a CID was provided 
+        if($cid){
             // get the original values
             try{
                 // template query to select all employees
-                $employee_template_query = "SELECT * FROM employee WHERE eid=:eid";
+                $customer_template_query = "SELECT * FROM customer WHERE cid=:cid";
                 // prepared select statement 
-                $employee_prepared_statement = $database_connect->prepare($employee_template_query);
+                $customer_prepared_statement = $database_connect->prepare($customer_template_query);
                 // execute the prepared statement 
-                $employee_prepared_statement->execute(array("eid"=> $eid));
+                $customer_prepared_statement->execute(array("cid"=> $cid));
 
                 // return all the rows
-                $employee_query_rows = $employee_prepared_statement->fetchAll(PDO::FETCH_ASSOC);
+                $customer_query_rows = $customer_prepared_statement->fetchAll(PDO::FETCH_ASSOC);
 
                 // if the query returns with results 
-                if(count($employee_query_rows) == 1){
+                if(count($customer_query_rows) == 1){
                                 // loop through the array and print out all the details
-                                foreach($employee_query_rows as $row){
+                                foreach($customer_query_rows as $row){
                                     $rfname = $row['fname'];
                                     $rlname = $row['lname'];
-                                    $rposition = $row['position'];
-                                    $rssn = $row['ssn'];
-                                    $ryears_worked = $row['years_worked'];
-                                    $rdob = $row['DOB'];
+                                    $remail = $row['email'];
+                                    $rphone = $row['phone'];
+                                    $rage = $row['rage'];
                                 }
                 }else{
                     echo '<p class="records_error"> Records could not be found !</p>';
@@ -83,44 +80,35 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             if($lname == NULL){
                 $lname = $rlname;
             }
-            if($position == NULL){
-                $position = $rposition;
+            if($email == NULL){
+                $email = $remail;
             } 
-            if($ssn == NULL){
-                $ssn = $rssn;
+            if($phone == NULL){
+                $phone = $rphone;
             }
-            if($ssn && strlen($ssn) != 9){
-                echo '<p class="records_update"> SSN not updated, requires 9 characters !</p>';
-                $ssn = $rssn;
+            if($age == NULL){
+                $age = $rage;
             }    
-            if($years_worked == NULL){
-                $years_worked = $ryears_worked;
-            }
-
-            if($dob == NULL){
-                $dob = $rdob;
-            }
 
             try{
                 // template query to bind the username and password into
-                $update_template_query = "UPDATE employee SET
+                $update_template_query = "UPDATE customer SET
                     fname = :fname,
                     lname = :lname,
-                    position = :position,
-                    ssn = :ssn,
-                    years_worked = :years_worked,
-                    dob = :dob WHERE eid = :eid ";
+                    email = :email,
+                    phone = :phone,
+                    age = :age
+                    WHERE cid = :cid";
                 // prepared login statement 
                 $update_prepared_statement = $database_connect->prepare($update_template_query);
                 // execute the prepared statement and bind the eid and password
                 $update_prepared_statement->execute(array(
                     "fname"=>$fname,
                     "lname"=>$lname,
-                    "position"=>$position,
-                    "ssn"=>$ssn,
-                    "years_worked"=>$years_worked,
-                    "dob"=>$dob,
-                    "eid"=>$eid));
+                    "email"=>$email,
+                    "phone"=>$phone,
+                    "age"=>$age,
+                    "cid"=>$cid));
 
                 // if the query returned with data, set the session variable
                 if($update_prepared_statement->rowCount() > 0){

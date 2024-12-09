@@ -5,6 +5,7 @@ ob_start();
 // close the session variable 
 unset($_SESSION['username']);
 unset($_SESSION['password']);
+unset($_SESSION['employee']);
 
 // back to index.php
 header("Location: index.php?logout=success");
