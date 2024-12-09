@@ -34,52 +34,94 @@ $eid = $_SESSION['username'];
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" href="index.php">Home</a>
+          <a class="nav-link active" href="../index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Arrangements </a>
+          <a class="nav-link" href="../arr.php">Arrangements </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Trinkets</a>
+          <a class="nav-link" href="../flowers.php">Flowers</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Greens</a>
+          <a class="nav-link" href="../coco.php">Chocolates</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Containers</a>
+          <a class="nav-link" href="../greens.php">Greens</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Chocolates</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Shopping Cart</a>
+          <a class="nav-link" href="../trink.php">Trinkets</a>
         </li>
         <?php
         if($eid == 'pxk5296'){
           echo '
-        <li class="nav-item">
-          <a class="nav-link" href="admin.php"> Admin </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../logout.php"> Logout </a>
-        </li>';
-        }
-
-        else if($eid && $eid != 'pxk5296'){
-          echo '
+        <span class="admin-icons">
           <li class="nav-item">
-            <a class="nav-link" href="profile.php"> Profile </a>
+            <a class="nav-link" href="admin.php"> <img src="images/admin.png"> </a>
           </li>
           <li class="nav-item">
-          <a class="nav-link" href="../logout.php"> Logout </a>
-          </li>'; 
+            <a class="nav-link" href="logout.php"> <img src="images/logout.png"> </a>
+          </li>
+        </span>';
+        }
+
+        else if($eid && $eid != 'pxk5296' && $emp_status == 1){
+          echo '
+          <span class="nav_icons">
+          <li class="nav-item">
+            <div class="profle_icon">
+              <a class="nav-link" href="employee/eprofile.php"> <img src="images/profile.png"> </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="profle_icon">
+              <a class="nav-link" href="inventory.php"> <img src="images/inv.png"> </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="profle_icon">
+              <a class="nav-link" href="orders.php"> <img src="images/truck.png"> </a>
+            </div>
+          </li>
+          <li class="nav-item">
+             <div class="profle_icon">
+              <a class="nav-link" href="logout.php"> <img src="images/logout.png"> </a>
+            </div>
+          </li>
+          </span>';
+        }
+
+        else if($eid && $eid != 'pxk5296' && $emp_status != 1){
+          echo '
+          <span class="nav_icons">
+          <li class="nav-item">
+            <div class="profle_icon">
+              <a class="nav-link" href="user/profile.php"> <img src="images/profile.png"> </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="profle_icon">
+              <a class="nav-link" href="shopping_cart.php"> <img src="images/shopping_cart.png"> </a>
+            </div>
+          </li>
+          <li class="nav-item">
+             <div class="profle_icon">
+              <a class="nav-link" href="logout.php"> <img src="images/logout.png"> </a>
+            </div>
+          </li>
+          </span>';
         }
 
         else{
           echo '
-          <li class="nav-item">
-            <a class="nav-link" href="login.php"> Login </a>
-          </li>';
+          <span class="def-icons">
+            <li class="nav-item">
+              <a class="nav-link" href="login.php"> Login </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="signup.php"> Signup </a>
+            </li>
+          </span>';
+        
         }
 
 

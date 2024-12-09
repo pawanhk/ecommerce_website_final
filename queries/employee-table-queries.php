@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="../css/admin.css">
 <?php
 
-include 'connect_to_database.php';
+include '../connect_to_database.php';
 
 // check for post 
 if($_SERVER['REQUEST_METHOD'] == "POST"){

@@ -42,7 +42,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                     echo "<td>" . $email . "</td>";
                     $phone = $row['phone'];
                     echo "<td>" . $phone . "</td>";
-                    $age = $row['age'];
+                    $age = $row['AGE'];
                     echo "<td>" . $age . "</td>";
                     echo "</tr>";
                 }
@@ -58,7 +58,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     if(isset($_POST['grbyage'])){
         try{
             // template query to select all employees
-            $customer_template_query = "SELECT age,COUNT(cid) AS CID FROM customer GROUP BY age";
+            $customer_template_query = "SELECT AGE,COUNT(cid) AS CID FROM customer GROUP BY AGE";
             // prepared select statement 
             $customer_prepared_statement = $database_connect->prepare($customer_template_query);
             // execute the prepared statement 
@@ -79,7 +79,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                 foreach($customer_query_rows as $row){
                     $customer_count = $row['CID'];
                     echo "<td>" . $customer_count . "</td>";
-                    $age = $row['age'];
+                    $age = $row['AGE'];
                     echo "<td>" . $age . "</td>";
                     echo "</tr>";
                 }

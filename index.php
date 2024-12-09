@@ -10,22 +10,22 @@ include 'base.php';
 <hr>
 
 <div class="r1-img-one">
-  <img src="images/item_template.png">
+  <img src="images/temp_flower.png">
   <h3>Lorem Ipsum</h3>
 </div>
 
 <div class="r1-img-one">
-  <img src="images/item_template.png">
+  <img src="images/temp_flower.png">
   <h3>Lorem Ipsum</h3>
 </div>
 
 <div class="r1-img-one">
-  <img src="images/item_template.png">
+  <img src="images/temp_flower.png">
   <h3>Lorem Ipsum</h3>
 </div>
 
 <div class="r1-img-one">
-  <img src="images/item_template.png">
+  <img src="images/temp_flower.png">
   <h3>Lorem Ipsum</h3>
 </div>
 
@@ -39,22 +39,22 @@ include 'base.php';
 
 
 <div class="r2-img-one">
-  <img src="images/item_template.png">
+  <img src="images/temp_flower.png">
   <h3>Lorem Ipsum</h3>
 </div>
 
 <div class="r2-img-one">
-  <img src="images/item_template.png">
+  <img src="images/temp_flower.png">
   <h3>Lorem Ipsum</h3>
 </div>
 
 <div class="r2-img-one">
-  <img src="images/item_template.png">
+  <img src="images/temp_flower.png">
   <h3>Lorem Ipsum</h3>
 </div>
 
 <div class="r2-img-one">
-  <img src="images/item_template.png">
+  <img src="images/temp_flower.png">
   <h3>Lorem Ipsum</h3>
 </div>
 
@@ -69,22 +69,22 @@ include 'base.php';
 <hr>
 
 <div class="r3-img-one">
-  <img src="images/item_template.png">
+  <img src="images/temp_flower.png">
   <h3>Lorem Ipsum</h3>
 </div>
 
 <div class="r3-img-one">
-  <img src="images/item_template.png">
+  <img src="images/temp_flower.png">
   <h3>Lorem Ipsum</h3>
 </div>
 
 <div class="r3-img-one">
-  <img src="images/item_template.png">
+  <img src="images/temp_flower.png">
   <h3>Lorem Ipsum</h3>
 </div>
 
 <div class="r3-img-one">
-  <img src="images/item_template.png">
+  <img src="images/temp_flower.png">
   <h3>Lorem Ipsum</h3>
 </div>
 
@@ -97,22 +97,22 @@ include 'base.php';
 
 <hr>
 <div class="r4-img-one">
-  <img src="images/item_template.png">
+  <img src="images/temp_flower.png">
   <h3>Lorem Ipsum</h3>
 </div>
 
 <div class="r4-img-one">
-  <img src="images/item_template.png">
+  <img src="images/temp_flower.png">
   <h3>Lorem Ipsum</h3>
 </div>
 
 <div class="r4-img-one">
-  <img src="images/item_template.png">
+  <img src="images/temp_flower.png">
   <h3>Lorem Ipsum</h3>
 </div>
 
 <div class="r4-img-one">
-  <img src="images/item_template.png">
+  <img src="images/temp_flower.png">
   <h3>Lorem Ipsum</h3>
 </div>
 

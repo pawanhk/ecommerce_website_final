@@ -2,23 +2,19 @@
 session_start(); 
 include '../scripts/connect_to_database.php';
 include 'base-copy.php';
-// if its another user and not the admin, kick them out
-if($eid != "pxk5296"){
-    header("Location: index.php?noaccess");
-}
+
 ?>
 
 <link rel="stylesheet" href="../css/admin.css">
 
 <div class="top-header">
-    <h1> Admin - Customer Update Page </h1> <a href="../admin.php"> Go Back </a>
+    <h1> Customer Update Page </h1> <a href="profile.php"> Go Back </a>
     <hr>
 </div>
 
 
 <div class="update-form">
     <form method="POST">
-        <h4>CID </h4> <input type="text" name="cid"> 
         <h4>First Name </h4> <input type="text" name="fname"> 
         <h4>Last Name </h4> <input type="text" name="lname"> 
         <h4>Email </h4> <input type="text" name="email"> 
@@ -35,7 +31,7 @@ if($eid != "pxk5296"){
 if($_SERVER['REQUEST_METHOD'] == "POST"){
     if(isset($_POST['up'])){
         // get the values from post to pass to the database
-        $cid = $_POST['cid'];
+        $cid = $_SESSION['cid'];
         $fname = $_POST['fname'];
         $lname = $_POST['lname'];
         $email = $_POST['email'];

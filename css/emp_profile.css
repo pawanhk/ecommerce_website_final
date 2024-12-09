@@ -1,0 +1,67 @@
+.top-header {
+    margin-top: 50px;
+    margin-left: 45px;
+}
+
+.top-header hr{
+    width: 95%;
+    height: 5px;
+    border: none;
+    background-color: #7CA284;
+    opacity: 100;
+}
+
+.emp-details{
+    margin-left: 45px;
+}
+
+.emp-details h3{
+    font-size: 20px;
+    display: flex;
+    justify-content: start; 
+    align-items: baseline; 
+    margin: 10px 0;
+}
+
+.emp-details span{
+    margin-left: auto;
+    text-align: left; 
+    width: 1670px;
+}
+
+.emp-details hr{
+    width: 95%;
+    height: 5px;
+}
+
+.emp-details button{
+    width: 150px;
+    height: 35px;
+    margin-right: 50px;
+    border: 1px solid #7CA284;
+    border-radius: 3px;
+}
+
+.display-emp-tables{
+    margin-top: 30px;
+    margin-left: 45px;
+    padding-bottom: 100px;
+}
+
+.display-emp-tables table{
+    border: 1px solid #7CA284;
+}
+
+.display-emp-tables table th{
+    text-align: center;
+    border-bottom: 1px solid #7CA284;
+    border-right: 1px solid #7CA284;
+    padding: 20px;
+}
+
+.display-emp-tables table td{
+    text-align: center;
+    border-bottom: 1px solid #7CA284;
+    border-right: 1px solid #7CA284;
+    padding: 20px;
+}

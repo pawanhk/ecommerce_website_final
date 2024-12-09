@@ -2,30 +2,26 @@
 session_start(); 
 include '../scripts/connect_to_database.php';
 include 'base-copy.php';
-// if its another user and not the admin, kick them out
-if($eid != "pxk5296"){
-    header("Location: index.php?noaccess");
-}
 ?>
 
 <link rel="stylesheet" href="../css/admin.css">
 
 <div class="top-header">
-    <h1> Admin - Customer Update Page </h1> <a href="../admin.php"> Go Back </a>
+    <h1> Edit an Address </h1> <a href="profile.php"> Go Back </a>
     <hr>
 </div>
 
 
 <div class="update-form">
     <form method="POST">
-        <h4>CID </h4> <input type="text" name="cid"> 
-        <h4>First Name </h4> <input type="text" name="fname"> 
-        <h4>Last Name </h4> <input type="text" name="lname"> 
-        <h4>Email </h4> <input type="text" name="email"> 
-        <h4>Phone </h4> <input type="text" name="phone"> 
-        <h4>Age </h4> <input type="text" name="age"> 
+        <h4>ADD_ID </h4> <input type="text" name="add_id"> 
+        <h4>Primary Address </h4> <input type="text" name="padd"> 
+        <h4>Secondary Address </h4> <input type="text" name="sadd"> 
+        <h4>City </h4> <input type="text" name="city"> 
+        <h4>State </h4> <input type="text" name="state"> 
+        <h4>Zip </h4> <input type="text" name="zip"> 
         <br>
-        <button name="up" type="submit">Update</button>
+        <button name="addup" type="submit">Update</button>
     </form>
 </div>
 
@@ -33,82 +29,83 @@ if($eid != "pxk5296"){
 <?php
 
 if($_SERVER['REQUEST_METHOD'] == "POST"){
-    if(isset($_POST['up'])){
+    if(isset($_POST['addup'])){
         // get the values from post to pass to the database
-        $cid = $_POST['cid'];
-        $fname = $_POST['fname'];
-        $lname = $_POST['lname'];
-        $email = $_POST['email'];
-        $phone = $_POST['phone'];
-        $age = $_POST['age'];
-
+        $cid = $_SESSION['cid'];
+        $add_id = $_POST['add_id'];
+        $padd = $_POST['padd'];
+        $sadd = $_POST['sadd'];
+        $city = $_POST['city'];
+        $state = $_POST['state'];
+        $zip = $_POST['zip'];
         // only continue if a CID was provided 
-        if($cid){
+        if($add_id){
             // get the original values
             try{
                 // template query to select all employees
-                $customer_template_query = "SELECT * FROM customer WHERE cid=:cid";
+                $customer_template_query = "SELECT * FROM address WHERE add_id=:add_id AND cid=:cid";
                 // prepared select statement 
                 $customer_prepared_statement = $database_connect->prepare($customer_template_query);
                 // execute the prepared statement 
-                $customer_prepared_statement->execute(array("cid"=> $cid));
+                $customer_prepared_statement->execute(array("add_id"=> $add_id,"cid"=> $cid));
 
                 // return all the rows
                 $customer_query_rows = $customer_prepared_statement->fetchAll(PDO::FETCH_ASSOC);
 
                 // if the query returns with results 
-                if(count($customer_query_rows) == 1){
+                if(count($customer_query_rows) > 0){
                                 // loop through the array and print out all the details
                                 foreach($customer_query_rows as $row){
-                                    $rfname = $row['fname'];
-                                    $rlname = $row['lname'];
-                                    $remail = $row['email'];
-                                    $rphone = $row['phone'];
-                                    $rage = $row['AGE'];
+                                    $rpadd  = $row['primary_add'];
+                                    $rsadd = $row['secondary_add'];
+                                    $rcity = $row['city'];
+                                    $rstate = $row['state'];
+                                    $rzip = $row['zip'];
                                 }
                 }else{
                     echo '<p class="records_error"> Records could not be found !</p>';
+                    exit();
                 }
             }catch(PDOException $e){
-                echo '<p class="records_error"> Query Error in the adming page !</p>';
+                echo '<p class="records_error"> Cannot process this update !</p>';
             }
 
             // if no post for the data fill with the existing value, add additional error checks
-            if($fname == NULL){
-                $fname = $rfname;
+            if($padd == NULL){
+                $padd = $rpadd;
             }      
-            if($lname == NULL){
-                $lname = $rlname;
+            if($sadd == NULL){
+                $sadd = $rsadd;
             }
-            if($email == NULL){
-                $email = $remail;
+            if($city == NULL){
+                $city = $rcity;
             } 
-            if($phone == NULL){
-                $phone = $rphone;
+            if($state == NULL){
+                $state = $rstate;
             }
-            if($age == NULL){
-                $age = $rage;
+            if($zip == NULL){
+                $zip = $rzip;
             }    
 
             try{
                 // template query to bind the username and password into
-                $update_template_query = "UPDATE customer SET
-                    fname = :fname,
-                    lname = :lname,
-                    email = :email,
-                    phone = :phone,
-                    AGE = :age
-                    WHERE cid = :cid";
+                $update_template_query = "UPDATE address SET
+                    primary_add = :padd,
+                    secondary_add = :sadd,
+                    city = :city,
+                    state = :state,
+                    zip = :zip
+                    WHERE add_id = :add_id";
                 // prepared login statement 
                 $update_prepared_statement = $database_connect->prepare($update_template_query);
                 // execute the prepared statement and bind the eid and password
                 $update_prepared_statement->execute(array(
-                    "fname"=>$fname,
-                    "lname"=>$lname,
-                    "email"=>$email,
-                    "phone"=>$phone,
-                    "age"=>$age,
-                    "cid"=>$cid));
+                    "padd"=>$padd,
+                    "sadd"=>$sadd,
+                    "city"=>$city,
+                    "state"=>$state,
+                    "zip"=>$zip,
+                    "add_id"=>$add_id));
 
                 // if the query returned with data, set the session variable
                 if($update_prepared_statement->rowCount() > 0){
@@ -121,7 +118,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                 echo '<p class="records_error"> Query Error in the adming page 1 !</p>';
             }
         }else{
-            echo '<p class="records_error"> EID is required !</p>';
+            echo '<p class="records_error"> add_id is required !</p>';
         }
         
     }
